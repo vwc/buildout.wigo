@@ -2,91 +2,153 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>wigo Theme, based on Twitter Bootstrap</title>
+    <title>Template &middot; Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le styles -->
-    <link href="less/styles.less" rel="stylesheet/less" type="text/css">
-    <!-- Responsive styles - enable if necessary -->
-    <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+    <link href="css/styles.css" rel="stylesheet">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
-    <script type="text/javascript" src="http://cdn.jquerytools.org/1.2.6/all/jquery.tools.min.js"></script>
-    <script type="text/javascript" src="js/less-1.3.3.min.js"></script>
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
   </head>
 
-  <body>
+  <body class="section-workspace">
 
-    <header id="topbar">
-      <div id="toolbar" class="navbar navbar-inverse navbar-fixed-top">
-          <a class="navbar-brand" href="#">Plone Toolbar</a>
-      </div>
-
-      <!-- Twitter boostrap based default navigation -->
-      <nav class="navbar">
-        <div class="container">
-          <a class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+    <header class="navbar navbar-inverse navbar-app navbar-fixed-top" id="header">
+        <div class="xcontainer">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </a>
-          <a class="navbar-brand" href="#">Project name</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav" id="main-nav">
-              <li class="active"><a href="#">Home</a></li>
+          </button>
+          <a class="navbar-brand" href="#"><i class="icon-signal"></i> :status</a>
+          <div class="nav-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav pull-right">
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
+              <li class="divider"></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
-      </nav>
     </header>
 
-    <section class="container">
-      <div id="content">
-        <h1>Starter template <small>The barebone minimal</small></h1>
-        <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col-span-4">
-            <p class="lead">
-              Use the provided Blokk web font to display lorem ipsum placeholder
-              text.</p>
-            <p class="text-muted">The effect is archieved by using the provided
-              <em>.wireframed</em>
-              class on an element or directly via stylesheet:
-            </p>
-            <code>font-family: 'Blokk';</code>
+    <section class="workspace">
+      <header class="workspace-header">
+        <div class="container">
+          <div class="row">
+            <div class="col col-lg-3">
+              <div class="infoboxes">
+                <div class="infobox infobox-plain">
+                  <h2>Status</h2>
+                  <h6>Vorwärts Werbung</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col col-lg-9">
+              <ul class="nav nav-pills pull-right">
+                <li><a href="#">Action A</a></li>
+                <li><a href="#">Action B</a></li>
+                <li><a href="#">Action C</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="col-span-8">
-          <div class="wireframed">
-            <p>Plaeceholder texts that don't actually have a meaning are rather harsh and
-              therefore somewhat bad when it comes to line length, width and overall layout</p>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
+      </header>
+      <div class="workspace-body">
+        <div class="container">
+          <div class="workspace-window">
+            <div class="workspace-window-header">
+              <h2>Workspace Body</h2>
+            </div>
+            <div class="workspace-window-subheader">
+              <h3>Info Workspace or context actions</h3>
+            </div>
+            <div class="workspace-window-body">
+              <p class="lead">
+                The actual content panel filled with context specific information
+              </p>
+              <p>These are the available application colors</p>
+              <div class="row infoboxes">
+                <div class="col col-lg-3 infobox">
+                  <h2>Application</h2>
+                  <h6>color code</h6>
+                </div>
+                <div class="col col-lg-3 infobox infobox-success">
+                  <h2>Application</h2>
+                  <h6>color code</h6>
+                </div>
+                <div class="col col-lg-3 infobox infobox-info2">
+                  <h2>Application</h2>
+                  <h6>color code</h6>
+                </div>
+                <div class="col col-lg-3 infobox infobox-danger">
+                  <h2>Application</h2>
+                  <h6>color code</h6>
+                </div>
+              </div>
+              <div class="infoboxes">
+                <div class="infobox">
+                  <h2>Application</h2>
+                  <h6>color code</h6>
+                </div>
+              </div>
+              <p class="text-muted">
+                <strong>Note:</strong>
+                These colors should eventually be adjusted to be retina ready
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </section> <!-- /container -->
+    </section>
 
-    <footer id="site-footer">
-      <div class="container">
-        <p>&copy; ACME Corp. 2012</p>
-      </div>
-    </footer>
+    <section class="container" id="main-content">
+
+    </section> <!-- /container -->
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../js/application.js"></script>
-
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http:////cdnjs.cloudflare.com/ajax/libs/moment.js/1.7.2/moment.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.timeago.js"></script>
+    <script src="js/jquery.timeago.de.js"></script>
+    <script type="text/javascript">
+    WebFontConfig = {
+      google: { families: [ 'Open+Sans:400,700:latin', 'Yanone+Kaffeesatz:400,700:latin' ] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+    </script>
   </body>
 </html>
