@@ -52,6 +52,22 @@ def test_suite():
 
         # -*- extra stuff goes here -*-
 
+        # Integration tests for ServerNode
+        ztc.ZopeDocFileSuite(
+            'ServerNode.txt',
+            package='wigo.statusapp',
+            optionflags = OPTION_FLAGS,
+            test_class=TestCase),
+
+
+        # Integration tests for StatusApp
+        ztc.ZopeDocFileSuite(
+            'StatusApp.txt',
+            package='wigo.statusapp',
+            optionflags = OPTION_FLAGS,
+            test_class=TestCase),
+
+
         ])
 
 if __name__ == '__main__':

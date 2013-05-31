@@ -8,4 +8,6 @@
   -->
 <object name="portal_types" meta_type="Plone Types Tool">
   <!-- -*- extra stuff goes here -*- -->
+  <object name="wigo.statusapp.servernode" meta_type="Dexterity FTI" />
+  <object name="wigo.statusapp.statusapp" meta_type="Dexterity FTI" />
 </object>
