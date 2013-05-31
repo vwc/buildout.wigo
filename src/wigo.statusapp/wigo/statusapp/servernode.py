@@ -20,7 +20,7 @@ class IServerNode(model.Schema, IImageScaleTraversable):
     Server details
     """
     server = schema.TextLine(
-        title=-(u"Server Name"),
+        title=_(u"Server Name"),
         required=True
     )
 
@@ -37,9 +37,9 @@ class View(grok.View):
     grok.name('view')
 
     def update(self):
-        self.has_info = len(self.hosted_sites()) > 0
+        self.has_info = len(self.server_details()) > 0
 
-    def hosted_sites(self):
+    def server_details(self):
         sn = getattr(self.context, 'server')
         url = 'http://%s.vorwaerts-werbung.de/serverdetails.json' % sn
         response = urllib2.urlopen(url)

@@ -7,8 +7,8 @@
       i18n:domain="wigo.statusapp">
 <body>
 
-<metal:main fill-slot="content-core">
-  <metal:content-core define-macro="content-core">
+<metal:main fill-slot="main">
+  <metal:content-core define-macro="main">
 
   <div class="workspace-window">
     <div class="workspace-window-header">
