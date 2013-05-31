@@ -1,15 +1,11 @@
+import json
+import urllib2
 from five import grok
 
 from z3c.form import group, field
 from zope import schema
-from zope.interface import invariant, Invalid
-from zope.schema.interfaces import IContextSourceBinder
-from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
 
 from plone.dexterity.content import Container
-from plone.directives import dexterity, form
-from plone.namedfile.field import NamedImage, NamedFile
-from plone.namedfile.field import NamedBlobImage, NamedBlobFile
 from plone.namedfile.interfaces import IImageScaleTraversable
 from plone.supermodel import model
 
@@ -23,6 +19,10 @@ class IServerNode(model.Schema, IImageScaleTraversable):
     """
     Server details
     """
+    server = schema.TextLine(
+        title=-(u"Server Name"),
+        required=True
+    )
 
 
 class ServerNode(Container):
@@ -36,5 +36,12 @@ class View(grok.View):
     grok.require('zope2.View')
     grok.name('view')
 
+    def update(self):
+        self.has_info = len(self.hosted_sites()) > 0
+
     def hosted_sites(self):
-        return dict()
+        sn = getattr(self.context, 'server')
+        url = 'http://%s.vorwaerts-werbung.de/serverdetails.json' % sn
+        response = urllib2.urlopen(url)
+        data = json.loads(response.read())
+        return data
