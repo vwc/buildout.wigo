@@ -1,7 +1,5 @@
-Introduction
-============
+WhatIsGoingOn - Status App
+==========================
 
-This is a blueprint buildout useful to kickstart new projects.
-This buildout should not be used directly, but is best downloaded
-or cloned to a new repository.
+This package provides a basic status application with configurable server nodes
 
