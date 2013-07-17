@@ -1,3 +1,4 @@
+from Acquisition import aq_inner
 from five import grok
 
 from z3c.form import group, field
@@ -38,4 +39,7 @@ class View(grok.View):
     grok.require('zope2.View')
     grok.name('view')
 
-    # Add view methods here
+    def contained_nodes(self):
+        context = aq_inner(self.context)
+        items = context.restrictedTraverse('@@folderListing')()
+        return items

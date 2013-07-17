@@ -42,6 +42,6 @@ class View(grok.View):
     def server_details(self):
         sn = getattr(self.context, 'server')
         url = 'http://%s.vorwaerts-werbung.de/serverdetails.json' % sn
-        response = urllib2.urlopen(url)
-        data = json.loads(response.read())
+        response = urllib2.urlopen(url).read()
+        data = json.loads(response)
         return data

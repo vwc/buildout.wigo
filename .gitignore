@@ -23,6 +23,8 @@ var
 *-ck.js
 .codeintel
 etc/**/*
+src/ade25.toolbar
+src/ade25.fabfiles
 src/plone.app.blocks
 src/plone.app.tiles
 src/plone.tiles
